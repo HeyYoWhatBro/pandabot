@@ -24,17 +24,8 @@ client.on('message', message =>{
   if(command === 'help')
   client.commands.get('help').execute(message, args)
   
-  if(command === 'grup')
-  client.commands.get('grup').execute(message, args)
-  
-  if(command === 'vote')
-  client.commands.get('vote').execute(message, args)
 
-  if(command === 'liststaff')
-  client.commands.get('liststaff').execute(message, args)
 
-  if(command === 'ip')
-  client.commands.get('ip').execute(message, args)
 });
 
 client.on("guildMemberAdd", member =>{
