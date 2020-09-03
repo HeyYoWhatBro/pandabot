@@ -20,11 +20,13 @@ client.on('message', message =>{
 
   const args = message.content.slice(preifix.length).split(/ =/);
   const command = args.shift().toLowerCase();
+  const autoRole = member.guild.roles.get('751121194673242112');
 
   if(command === 'help')
   client.commands.get('help').execute(message, args)
   
-
+  if (autoRole) return
+  member.addRole(autoRole.id);
 
 });
 
