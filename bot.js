@@ -25,8 +25,8 @@ client.on('message', message =>{
   if(command === 'help')
   client.commands.get('help').execute(message, args)
   
-  if (autoRole) return
-  member.addRole(autoRole.id);
+
+
 
 });
 
