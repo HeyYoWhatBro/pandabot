@@ -20,7 +20,7 @@ client.on('message', message =>{
 
   const args = message.content.slice(preifix.length).split(/ =/);
   const command = args.shift().toLowerCase();
-  const autoRole = member.guild.roles.get('751121194673242112');
+  
 
   if(command === 'help')
   client.commands.get('help').execute(message, args)
@@ -32,7 +32,7 @@ client.on('message', message =>{
 
 client.on("guildMemberAdd", member =>{
   const channelId = '751139106142290020'
-
+const autoRole = member.guild.roles.get('751121194673242112');
   const targetChannelId = '751059828100694066'
 const message = `Please welcome <@${
 
@@ -56,5 +56,10 @@ const message = `Please welcome <@${
       { name: 'Untuk tau Command dari bot ini', value: 'Tulis &help', inline: false},
     )
     member.send(welcome);
+  
+  if (!autoRole) return;
+  member.addrole(autoRole.Id);
+  
+      
 });
 client.login(process.env.discordtoken);
