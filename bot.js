@@ -32,7 +32,7 @@ client.on('message', message =>{
 
 client.on("guildMemberAdd", member =>{
   const channelId = '751139106142290020'
-const autoRole = member.guild.roles.get('751121194673242112');
+
   const targetChannelId = '751059828100694066'
 const message = `Please welcome <@${
 
@@ -57,8 +57,8 @@ const message = `Please welcome <@${
     )
     member.send(welcome);
   
-  if (!autoRole) return;
-  member.addrole(autoRole.Id);
+
+
   
       
 });
