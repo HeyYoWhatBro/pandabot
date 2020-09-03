@@ -31,21 +31,8 @@ client.on('message', message =>{
 });
 
 client.on("guildMemberAdd", member =>{
-  
-  
-  let memberlog = "751139106142290020";
 
-  if (member.guild.id !== "751139106142290020") return;
-  
-  client.channels.cache.get(memberlog).send(`Welcome to the **${member.guild.name}**, <@!${member.user.id}> !!!`);
-  member.roles.add("751121194673242112"); 
-})
 
-client.on("guildMemberRemove", member => {
-  if (member.guild.id !== "751139106142290020") return;
-  
-  client.channels.cache.get(memberlog).send(`So long... **${member.user.tag}** ... :(`);
-})
  
     const welcome = new Discord.MessageEmbed()
 
