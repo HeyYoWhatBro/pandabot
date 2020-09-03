@@ -48,4 +48,4 @@ client.on("guildMemberAdd", member =>{
     )
     member.send(welcome);
 });
-client.login(process.env.token);
+client.login(process.env.discordtoken);
