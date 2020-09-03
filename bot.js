@@ -29,7 +29,23 @@ client.on('message', message =>{
 });
 
 client.on("guildMemberAdd", member =>{
+  const channelId = '751139106142290020'
 
+  const targetChannelId = '751059828100694066'
+const message = `Please welcome <@${
+
+      member.id
+
+    }> to the server! Please check out ${member.guild.channels.cache
+
+      .get(targetChannelId)
+
+      .toString()}`
+
+    const channel = member.guild.channels.cache.get(channelId)
+    channel.send(message)
+
+  
     const welcome = new Discord.MessageEmbed()
 
     .setTitle('selamat datang di otsuCraft Discord')
