@@ -38,7 +38,7 @@ client.on("guildMemberAdd", member => {
   if (member.guild.id !== "751059827672744008") return;
   
   client.channels.cache.get(memberlog).send(`Selamat datang ke PandaCraft Discord **${member.guild.name}**, <@!${member.user.id}> !!!`);
-  member.roles.add("751121194673242112"); 
+   member.guild.roles.get('751121194673242112');
 })
 client.on("guildMemberRemove", member => {
   if (member.guild.id !== "751059827672744008") return;
