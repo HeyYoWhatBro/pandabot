@@ -30,7 +30,7 @@ client.on('message', message =>{
 
 });
 let memberlog = "751139106142290020";
-
+const autorole = member.guild.roles.get('751121194673242112')
 client.on("guildMemberAdd", member =>{
 if (member.guild.id !== "751059827672744008") return;
 
@@ -38,12 +38,18 @@ client.on("guildMemberAdd", member => {
   if (member.guild.id !== "751059827672744008") return;
   
   client.channels.cache.get(memberlog).send(`Selamat datang ke PandaCraft Discord **${member.guild.name}**, <@!${member.user.id}> !!!`);
-   member.guild.roles.get('751121194673242112');
+   
+
+
+
+
 })
 client.on("guildMemberRemove", member => {
   if (member.guild.id !== "751059827672744008") return;
   
   client.channels.cache.get(memberlog).send(`Player **${member.user.tag}** keluar dari PandaCraft Discord :(`);
+if(!autorole) return;
+member.addRole(autorole.id);
 });
   
 
