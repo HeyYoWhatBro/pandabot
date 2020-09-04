@@ -63,4 +63,4 @@ member.addRole(autorole.id);
     )
     member.send(welcome);
 });
-client.login(process.env.discordtoken);
+client.login(process.env.token);
